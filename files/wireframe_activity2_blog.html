@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wireframe - Activity 2: Blogging Platform (Inkwell)</title>
+  <style>
+    /* ── Wireframe-only CSS: শুধু বাক্স, border, background ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+
+    .page-label {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border: 2px dashed #333;
+      padding: 10px;
+      background: #fff;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .box {
+      border: 2px solid #333;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+      padding: 8px;
+    }
+    .box-light { background: #ececec; }
+    .box-dark  { background: #bbb; }
+    .box-white { background: #fff; }
+
+    .row { display: flex; gap: 10px; margin-bottom: 10px; }
+    .col { flex: 1; }
+    .page { background: #fff; border: 3px solid #222; max-width: 900px; margin: 0 auto; }
+    .section-pad { padding: 20px; border-bottom: 2px solid #333; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  </style>
+</head>
+<body>
+
+<div class="page-label">
+&#128736; WIREFRAME — Activity 2: Blogging Platform (Inkwell)
+</div>
+
+<div class="page">
+
+  <!-- ══ 1. TOP BAR ══ -->
+  <div class="box box-dark" style="height:28px;border-bottom:2px solid #333;font-size:11px;border-left:none;border-right:none;border-top:none;">
+    [ TOP BAR — Subscribe message + link | Language/Date info ]
+  </div>
+
+  <!-- ══ 2. HEADER ══ -->
+  <div style="display:flex;align-items:center;height:64px;border-bottom:2px solid #333;padding:0 20px;gap:10px;background:#ececec;">
+    <div class="box" style="width:130px;height:40px;font-size:13px;">LOGO: Inkwell</div>
+    <div class="box box-light" style="flex:1;height:40px;font-size:11px;">NAV: Home | Blog | Categories | Authors | About | Contact</div>
+    <div class="box box-light" style="width:160px;height:40px;font-size:11px;">🔍 Search bar</div>
+    <div class="box box-dark" style="width:100px;height:36px;font-size:11px;">[ Subscribe ]</div>
+  </div>
+
+  <!-- ══ 3. HERO / FEATURED POST ══ -->
+  <div class="section-pad" style="background:#f5f5f5;">
+    <p class="section-title">Section: Homepage Hero — Featured Article</p>
+    <div style="display:flex;gap:10px;">
+      <!-- Left copy -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:8px;">
+        <div class="box box-light" style="height:22px;font-size:11px;">[ Category Badge: Technology ]</div>
+        <div class="box box-dark" style="height:90px;font-size:15px;">H1: Featured Article Headline (Big Bold Text)</div>
+        <div class="box box-light" style="height:50px;font-size:11px;">[ Short description / excerpt paragraph ]</div>
+        <div class="box box-light" style="height:32px;font-size:11px;">[ Author Avatar ] Author Name · Date · Read time</div>
+      </div>
+      <!-- Right featured card -->
+      <div style="width:340px;border:2px solid #333;background:#ddd;overflow:hidden;">
+        <div class="box box-dark" style="height:160px;border:none;font-size:12px;">[ Featured Post Image ]</div>
+        <div style="padding:12px;">
+          <div class="box box-light" style="height:18px;width:80px;font-size:10px;margin-bottom:6px;">[ Category ]</div>
+          <div class="box box-light" style="height:36px;font-size:11px;">H2: Featured Post Title</div>
+          <div class="box box-white" style="height:20px;margin-top:6px;font-size:10px;">Short excerpt text</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 4. CATEGORIES TAB BAR ══ -->
+  <div class="section-pad" style="padding:12px 20px;background:#e8e8e8;">
+    <p class="section-title">Section: Categories / Tags Navigation</p>
+    <div style="display:flex;gap:8px;">
+      <div class="box box-dark" style="height:32px;padding:0 14px;font-size:11px;">All Posts ✓</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Technology</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Design</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Science</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Culture</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Business</div>
+      <div class="box box-light" style="height:32px;padding:0 14px;font-size:11px;">Lifestyle</div>
+    </div>
+  </div>
+
+  <!-- ══ 5. BLOG POSTS + SIDEBAR ══ -->
+  <div class="section-pad">
+    <p class="section-title">Section: Blog Posts List + Sidebar</p>
+    <div style="display:grid;grid-template-columns:1fr 270px;gap:14px;">
+
+      <!-- Main posts area -->
+      <div>
+        <!-- Big featured post card -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;border:2px solid #333;margin-bottom:12px;background:#fff;">
+          <div class="box box-dark" style="height:180px;border:none;font-size:12px;">[ Featured Post Image ]</div>
+          <div style="padding:12px;display:flex;flex-direction:column;gap:6px;">
+            <div class="box box-light" style="height:18px;font-size:10px;">[Category Badge]</div>
+            <div class="box box-light" style="height:50px;font-size:11px;">H3: Featured Post Title (Larger)</div>
+            <div class="box box-white" style="height:40px;font-size:10px;">Excerpt text paragraph...</div>
+            <div class="box box-light" style="height:24px;font-size:10px;">[Avatar] Author · Read time</div>
+          </div>
+        </div>
+
+        <!-- 2-column small post cards -->
+        <div class="grid-2">
+          <!-- Post Card 1 -->
+          <div style="border:2px solid #333;background:#fff;overflow:hidden;">
+            <div class="box box-dark" style="height:100px;border:none;font-size:11px;">[ Post Image ]</div>
+            <div style="padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div class="box box-light" style="height:16px;font-size:10px;">[Category]</div>
+              <div class="box box-light" style="height:36px;font-size:10px;">H3: Post Title Text Here</div>
+              <div class="box box-white" style="height:30px;font-size:9px;">Short excerpt...</div>
+              <div style="display:flex;justify-content:space-between;">
+                <div class="box box-light" style="height:20px;flex:1;font-size:9px;">[Avatar] Author</div>
+                <div class="box box-light" style="height:20px;width:60px;margin-left:5px;font-size:9px;">Mar 10</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Card 2 -->
+          <div style="border:2px solid #333;background:#fff;overflow:hidden;">
+            <div class="box box-dark" style="height:100px;border:none;font-size:11px;">[ Post Image ]</div>
+            <div style="padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div class="box box-light" style="height:16px;font-size:10px;">[Category]</div>
+              <div class="box box-light" style="height:36px;font-size:10px;">H3: Post Title Text Here</div>
+              <div class="box box-white" style="height:30px;font-size:9px;">Short excerpt...</div>
+              <div style="display:flex;justify-content:space-between;">
+                <div class="box box-light" style="height:20px;flex:1;font-size:9px;">[Avatar] Author</div>
+                <div class="box box-light" style="height:20px;width:60px;margin-left:5px;font-size:9px;">Mar 7</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Card 3 -->
+          <div style="border:2px solid #333;background:#fff;overflow:hidden;">
+            <div class="box box-dark" style="height:100px;border:none;font-size:11px;">[ Post Image ]</div>
+            <div style="padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div class="box box-light" style="height:16px;font-size:10px;">[Category]</div>
+              <div class="box box-light" style="height:36px;font-size:10px;">H3: Post Title Text Here</div>
+              <div class="box box-white" style="height:30px;font-size:9px;">Short excerpt...</div>
+              <div style="display:flex;justify-content:space-between;">
+                <div class="box box-light" style="height:20px;flex:1;font-size:9px;">[Avatar] Author</div>
+                <div class="box box-light" style="height:20px;width:60px;margin-left:5px;font-size:9px;">Mar 5</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post Card 4 -->
+          <div style="border:2px solid #333;background:#fff;overflow:hidden;">
+            <div class="box box-dark" style="height:100px;border:none;font-size:11px;">[ Post Image ]</div>
+            <div style="padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div class="box box-light" style="height:16px;font-size:10px;">[Category]</div>
+              <div class="box box-light" style="height:36px;font-size:10px;">H3: Post Title Text Here</div>
+              <div class="box box-white" style="height:30px;font-size:9px;">Short excerpt...</div>
+              <div style="display:flex;justify-content:space-between;">
+                <div class="box box-light" style="height:20px;flex:1;font-size:9px;">[Avatar] Author</div>
+                <div class="box box-light" style="height:20px;width:60px;margin-left:5px;font-size:9px;">Feb 28</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside style="display:flex;flex-direction:column;gap:12px;">
+
+        <!-- Newsletter Widget -->
+        <div style="border:2px solid #333;background:#ececec;padding:12px;display:flex;flex-direction:column;gap:6px;">
+          <div class="box box-dark" style="height:20px;font-size:11px;">📬 Newsletter Widget</div>
+          <div class="box box-white" style="height:30px;font-size:10px;">Description text</div>
+          <div class="box box-light" style="height:26px;font-size:10px;">Name input</div>
+          <div class="box box-light" style="height:26px;font-size:10px;">Email input</div>
+          <div class="box box-dark" style="height:28px;font-size:10px;">[ Subscribe Button ]</div>
+        </div>
+
+        <!-- Categories Widget -->
+        <div style="border:2px solid #333;background:#ececec;padding:12px;display:flex;flex-direction:column;gap:4px;">
+          <div class="box box-dark" style="height:20px;font-size:11px;">📂 Categories</div>
+          <div class="box box-white" style="height:20px;font-size:10px;">Technology ............ 24</div>
+          <div class="box box-white" style="height:20px;font-size:10px;">Design ................ 18</div>
+          <div class="box box-white" style="height:20px;font-size:10px;">Science ............... 15</div>
+          <div class="box box-white" style="height:20px;font-size:10px;">Culture ............... 22</div>
+        </div>
+
+        <!-- Popular Posts Widget -->
+        <div style="border:2px solid #333;background:#ececec;padding:12px;display:flex;flex-direction:column;gap:5px;">
+          <div class="box box-dark" style="height:20px;font-size:11px;">🔥 Popular This Week</div>
+          <div class="box box-white" style="height:36px;font-size:9px;text-align:left;">01. Post Title Here<br/>9,412 views</div>
+          <div class="box box-white" style="height:36px;font-size:9px;text-align:left;">02. Post Title Here<br/>7,880 views</div>
+          <div class="box box-white" style="height:36px;font-size:9px;text-align:left;">03. Post Title Here<br/>6,214 views</div>
+        </div>
+
+        <!-- Tags Widget -->
+        <div style="border:2px solid #333;background:#ececec;padding:12px;">
+          <div class="box box-dark" style="height:20px;font-size:11px;margin-bottom:6px;">🏷️ Tags Cloud</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">AI</div>
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">Design</div>
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">Climate</div>
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">Space</div>
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">Books</div>
+            <div class="box box-white" style="height:22px;padding:0 8px;font-size:9px;">Startups</div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- ══ 6. FULL BLOG POST VIEW ══ -->
+  <div class="section-pad" style="background:#f9f9f9;">
+    <p class="section-title">Section: Individual Blog Post / Article Page</p>
+    <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
+      <div class="box box-light" style="height:20px;font-size:11px;">[Category Badge] | Author | Date | Read time | Comments</div>
+      <div class="box box-dark" style="height:60px;font-size:15px;">H1: Full Article Headline</div>
+      <div class="box box-dark" style="height:200px;font-size:12px;">[ Hero / Featured Image ]<br/>figcaption below</div>
+      <div class="box box-light" style="height:16px;font-size:10px;">[ figcaption: Image description / credit ]</div>
+      <div class="box box-white" style="height:60px;font-size:11px;">[ Paragraph text — article body content... ]</div>
+      <div class="box box-dark" style="height:24px;font-size:12px;">H2: Section Heading</div>
+      <div class="box box-white" style="height:50px;font-size:11px;">[ Paragraph text continues... ]</div>
+      <div class="box box-light" style="height:50px;border-left:4px solid #555;font-size:11px;text-align:left;padding-left:12px;">
+        [ Blockquote — pull quote from article ]
+      </div>
+      <div class="box box-white" style="height:40px;font-size:11px;">[ Ordered list or Unordered list items ]</div>
+      <!-- Embedded video -->
+      <div style="border:2px solid #333;background:#bbb;height:130px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
+        <div style="font-size:20px;">▶ [ VIDEO EMBED ]</div>
+        <div style="font-size:11px;font-weight:bold;">video controls | source | figcaption</div>
+        <div style="font-size:10px;">[ figcaption: Video title and description ]</div>
+      </div>
+      <div class="box box-white" style="height:40px;font-size:11px;">[ Remaining article paragraphs... ]</div>
+      <!-- Tags & Share -->
+      <div class="box box-light" style="height:28px;font-size:11px;">Tags: [AI] [Design] [Future of Work] [Technology]</div>
+      <div class="row" style="margin:0;">
+        <div class="box box-dark col" style="height:32px;font-size:10px;">[ Share: Twitter ]</div>
+        <div class="box box-dark col" style="height:32px;font-size:10px;">[ LinkedIn ]</div>
+        <div class="box box-dark col" style="height:32px;font-size:10px;">[ Facebook ]</div>
+        <div class="box box-dark col" style="height:32px;font-size:10px;">[ Copy Link ]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 7. COMMENTS SECTION ══ -->
+  <div class="section-pad">
+    <p class="section-title">Section: Comments + Comment Form</p>
+    <div style="max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:10px;">
+      <div class="box box-dark" style="height:24px;font-size:12px;">H3: Comments (34)</div>
+
+      <!-- Comment 1 -->
+      <div style="display:flex;gap:10px;border:2px solid #333;padding:10px;background:#fff;">
+        <div class="box box-dark" style="width:40px;height:40px;border-radius:50%;font-size:10px;flex-shrink:0;">[Av]</div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px;">
+          <div class="box box-light" style="height:18px;font-size:10px;">Author Name | Date &amp; Time | [Reply link]</div>
+          <div class="box box-white" style="height:36px;font-size:10px;">Comment text content here...</div>
+        </div>
+      </div>
+
+      <!-- Comment 2 -->
+      <div style="display:flex;gap:10px;border:2px solid #333;padding:10px;background:#fff;">
+        <div class="box box-dark" style="width:40px;height:40px;border-radius:50%;font-size:10px;flex-shrink:0;">[Av]</div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:4px;">
+          <div class="box box-light" style="height:18px;font-size:10px;">Author Name | Date &amp; Time | [Reply link]</div>
+          <div class="box box-white" style="height:36px;font-size:10px;">Comment text content here...</div>
+        </div>
+      </div>
+
+      <!-- Comment Form -->
+      <div class="box box-dark" style="height:24px;font-size:12px;">H3: Leave a Comment</div>
+      <div class="grid-2">
+        <div class="box box-light" style="height:32px;font-size:10px;">Name input *</div>
+        <div class="box box-light" style="height:32px;font-size:10px;">Email input *</div>
+      </div>
+      <div class="box box-light" style="height:32px;font-size:10px;">Website input (optional)</div>
+      <div class="box box-light" style="height:80px;font-size:10px;">Comment textarea *</div>
+      <div class="box box-light" style="height:24px;font-size:10px;">☐ Notify me of follow-up comments</div>
+      <div class="box box-dark" style="height:36px;font-size:11px;">[ Post Comment Button ]</div>
+    </div>
+  </div>
+
+  <!-- ══ 8. AUTHORS PAGE ══ -->
+  <div class="section-pad" style="background:#f5f5f5;">
+    <p class="section-title">Section: Authors Page</p>
+    <div class="grid-3">
+      <!-- Author Card x3 -->
+      <div style="border:2px solid #333;background:#fff;padding:15px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
+        <div class="box box-dark" style="width:70px;height:70px;border-radius:50%;font-size:12px;">[Photo]</div>
+        <div class="box box-light" style="height:20px;width:100%;font-size:11px;">Author Name</div>
+        <div class="box box-light" style="height:16px;width:80%;font-size:10px;">Role / Beat</div>
+        <div class="box box-white" style="height:50px;width:100%;font-size:10px;">Short bio text here...</div>
+        <div class="box box-light" style="height:16px;width:100%;font-size:10px;">X articles published</div>
+        <div class="box box-dark" style="height:26px;width:100%;font-size:10px;">[ View Articles | Contact ]</div>
+      </div>
+
+      <div style="border:2px solid #333;background:#fff;padding:15px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
+        <div class="box box-dark" style="width:70px;height:70px;border-radius:50%;font-size:12px;">[Photo]</div>
+        <div class="box box-light" style="height:20px;width:100%;font-size:11px;">Author Name</div>
+        <div class="box box-light" style="height:16px;width:80%;font-size:10px;">Role / Beat</div>
+        <div class="box box-white" style="height:50px;width:100%;font-size:10px;">Short bio text here...</div>
+        <div class="box box-light" style="height:16px;width:100%;font-size:10px;">X articles published</div>
+        <div class="box box-dark" style="height:26px;width:100%;font-size:10px;">[ View Articles | Contact ]</div>
+      </div>
+
+      <div style="border:2px solid #333;background:#fff;padding:15px;display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;">
+        <div class="box box-dark" style="width:70px;height:70px;border-radius:50%;font-size:12px;">[Photo]</div>
+        <div class="box box-light" style="height:20px;width:100%;font-size:11px;">Author Name</div>
+        <div class="box box-light" style="height:16px;width:80%;font-size:10px;">Role / Beat</div>
+        <div class="box box-white" style="height:50px;width:100%;font-size:10px;">Short bio text here...</div>
+        <div class="box box-light" style="height:16px;width:100%;font-size:10px;">X articles published</div>
+        <div class="box box-dark" style="height:26px;width:100%;font-size:10px;">[ View Articles | Contact ]</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 9. ABOUT US ══ -->
+  <div class="section-pad">
+    <p class="section-title">Section: About Us</p>
+    <div class="grid-2">
+      <div class="box box-dark" style="height:220px;font-size:13px;">[ About / Team Photo ]</div>
+      <div style="border:2px solid #333;background:#fff;padding:15px;display:flex;flex-direction:column;gap:8px;height:220px;justify-content:center;">
+        <div class="box box-dark" style="height:20px;font-size:11px;">H2: About Headline</div>
+        <div class="box box-light" style="height:50px;font-size:10px;">[ Mission description paragraph ]</div>
+        <div class="grid-2">
+          <div class="box box-dark" style="height:44px;font-size:10px;">120+ Articles</div>
+          <div class="box box-dark" style="height:44px;font-size:10px;">12K Subscribers</div>
+          <div class="box box-dark" style="height:44px;font-size:10px;">4.9★ Rating</div>
+          <div class="box box-dark" style="height:44px;font-size:10px;">8 Authors</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 10. NEWSLETTER SUBSCRIBE ══ -->
+  <div class="section-pad" style="background:#e8e8e8;">
+    <p class="section-title">Section: Newsletter Subscribe</p>
+    <div style="max-width:500px;margin:0 auto;display:flex;flex-direction:column;gap:8px;text-align:center;">
+      <div class="box box-dark" style="height:24px;font-size:12px;">H2: Subscribe to the Weekly Digest</div>
+      <div class="box box-white" style="height:36px;font-size:11px;">[ Description — what subscribers get ]</div>
+      <div class="box box-light" style="height:30px;font-size:10px;">Name input</div>
+      <div class="box box-light" style="height:30px;font-size:10px;">Email input *</div>
+      <div class="box box-white" style="height:60px;font-size:10px;">
+        ☐ Technology &nbsp; ☐ Design<br/>
+        ☐ Science &nbsp;&nbsp; ☐ Culture<br/>
+        (Interests checkboxes)
+      </div>
+      <div class="box box-dark" style="height:36px;font-size:11px;">[ Subscribe Free Button ]</div>
+    </div>
+  </div>
+
+  <!-- ══ 11. CONTACT ══ -->
+  <div class="section-pad">
+    <p class="section-title">Section: Contact Us</p>
+    <div class="grid-2">
+      <!-- Contact Form -->
+      <div style="border:2px solid #333;background:#fff;padding:15px;display:flex;flex-direction:column;gap:8px;">
+        <div class="box box-dark" style="height:20px;font-size:11px;">H3: Send a Message</div>
+        <div class="box box-light" style="height:30px;font-size:10px;">Name input *</div>
+        <div class="box box-light" style="height:30px;font-size:10px;">Email input *</div>
+        <div class="box box-light" style="height:30px;font-size:10px;">Subject dropdown ▼</div>
+        <div class="box box-light" style="height:80px;font-size:10px;">Message textarea *</div>
+        <div class="box box-dark" style="height:34px;font-size:11px;">[ Send Message Button ]</div>
+      </div>
+      <!-- Contact Info -->
+      <div style="border:2px solid #333;background:#ececec;padding:15px;display:flex;flex-direction:column;gap:10px;">
+        <div class="box box-dark" style="height:20px;font-size:11px;">H3: Contact Information</div>
+        <div class="box box-white" style="height:30px;font-size:10px;">📍 Address (Mumbai, Maharashtra)</div>
+        <div class="box box-white" style="height:30px;font-size:10px;">✉️ hello@inkwell.in</div>
+        <div class="box box-white" style="height:30px;font-size:10px;">✉️ pitch@inkwell.in (for pitches)</div>
+        <div class="box box-white" style="height:30px;font-size:10px;">🕐 Response time: 48 hours</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ 12. FOOTER ══ -->
+  <div class="section-pad" style="background:#bbb;">
+    <p class="section-title">Section: Footer</p>
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:10px;margin-bottom:10px;">
+      <div class="box box-dark" style="height:110px;flex-direction:column;gap:5px;font-size:11px;">
+        LOGO<br/>Tagline text<br/>[ Twitter | Instagram | LinkedIn | RSS ]
+      </div>
+      <div class="box box-dark" style="height:110px;flex-direction:column;gap:3px;font-size:10px;">
+        Read<br/>──────<br/>Latest Articles<br/>Technology<br/>Design · Science
+      </div>
+      <div class="box box-dark" style="height:110px;flex-direction:column;gap:3px;font-size:10px;">
+        Authors<br/>──────<br/>Priya Nair<br/>Zara Iyer<br/>Write for Us
+      </div>
+      <div class="box box-dark" style="height:110px;flex-direction:column;gap:3px;font-size:10px;">
+        Company<br/>──────<br/>About<br/>Editorial Policy<br/>Privacy · Contact
+      </div>
+    </div>
+    <div class="box box-light" style="height:28px;font-size:11px;">
+      © 2025 Inkwell. All rights reserved. | Privacy Policy | Editorial Policy
+    </div>
+  </div>
+
+</div><!-- /page -->
+
+</body>
+</html>

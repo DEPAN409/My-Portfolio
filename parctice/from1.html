@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="msg">Message:</label>
+  <textarea id="msg" name="msg" rows="4" placeholder="Type here..."></textarea>
+
+  <label for="country">Country:</label>
+  <select id="country" name="country">
+    <option value="in">India</option>
+    <option value="us">USA</option>
+  </select>
+
+  <input type="submit" value="Send">
+
+</form>
+<!-- ```
+
+---
+
+## 🔷 Simple memory trick:
+
+| Element | Remember it as |
+|---|---|
+| `<form>` | The **envelope** — holds everything |
+| `<label>` | The **question** written on paper |
+| `<input>` | The **blank line** to fill in |
+| `<textarea>` | A **big blank box** for long answers |
+| `<select>` | A **dropdown menu** to pick from |
+| `submit` | The **Send button** |
+
+---
+
+## 🔷 The journey of data:
+```
+User fills form → clicks Submit
+       ↓
+Browser collects all field values
+       ↓
+Sends to the URL in action=""
+       ↓
+Server receives and processes it -->
+<br>
+<button>
+    <img src="Depan-profile.jpg" alt="Button icon" width="150" height="150">click here to download
+</button>
+</body>
+</html>

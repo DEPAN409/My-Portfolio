@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depan Das - Full Stack Developer Portfolio</title>
+    <style>
+        /* CSS Variables for Easy Color Changes */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
+            --white: #ffffff;
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--dark) 0%, #0f172a 100%);
+            color: var(--white);
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header .subtitle {
+            font-size: 1.3em;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+        }
+
+        .contact-info a {
+            color: #60a5fa;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--white);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: var(--primary);
+            color: var(--white);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .project-card {
+            border-left: 5px solid var(--primary);
+            padding-left: 25px;
+            margin-bottom: 30px;
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateX(5px);
+        }
+
+        .project-card h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.3em;
+        }
+
+        .tech-stack {
+            font-size: 0.85em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .project-card li {
+            margin-bottom: 5px;
+        }
+
+        /* Education Section */
+        .education-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .education-item:last-child {
+            border-bottom: none;
+        }
+
+        .education-item h3 {
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+
+        .education-item .institution {
+            color: var(--text-light);
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>DEPAN DAS</h1>
+        <div class="subtitle">Aspiring Full Stack Developer</div>
+        <div class="contact-info">
+            <span>📞 +91 98316 30531</span>
+            <span>✉️ depandas46@gmail.com</span>
+            <span>📍 Kolkata, West Bengal</span>
+            <br>
+            <!-- UPDATED LINKS BELOW -->
+            <a href="https://github.com/DEPAN409" target="_blank">🔗 GitHub</a>
+            <a href="https://www.linkedin.com/in/depan-das-959194389" target="_blank">🔗 LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <div class="section">
+            <h2>About Me</h2>
+            <p>A highly motivated BCA student with a strong foundation in software development principles. Passionate about building scalable web applications from the database to the user interface. Eager to leverage my skills in <strong>Java, Python, and Web Technologies</strong> to contribute to innovative Full Stack projects and drive company success.</p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Core</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">OOPs</span>
+                        <span class="skill-tag">Data Structures</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Database</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">MS Office</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="section">
+            <h2>Featured Projects</h2>
+            
+            <div class="project-card">
+                <h3>Library Management System</h3>
+                <div class="tech-stack">Java | OOPs | SQL Concepts</div>
+                <p>Developed a comprehensive system to manage library operations, focusing on data integrity and user accessibility.</p>
+                <ul>
+                    <li>Implemented logic for adding books, issuing, and tracking returns.</li>
+                    <li>Designed a clean interface for librarians to manage inventory efficiently.</li>
+                    <li>Structured data models for efficient storage and retrieval of book records.</li>
+                </ul>
+            </div>
+
+            <div class="project-card">
+                <h3>Personal Portfolio Website</h3>
+                <div class="tech-stack">HTML | CSS | JavaScript</div>
+                <p>Built a responsive personal website to showcase projects and resume with modern design principles.</p>
+                <ul>
+                    <li>Responsive layout for mobile and desktop devices.</li>
+                    <li>Contact form integration with validation.</li>
+                    <li>Dark mode toggle functionality.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education Section -->
+        <div class="section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <h3>Bachelor of Computer Application (BCA)</h3>
+                <div class="institution">Techno India University | Graduation: 2025</div>
+                <p>Relevant Coursework: Data Structures, Web Technologies, Software Engineering</p>
+            </div>
+
+            <div class="education-item">
+                <h3>Higher Secondary (Class 12th)</h3>
+                <div class="institution">Sarat Chandra Sur Institution | Passing: 2021</div>
+            </div>
+
+            <div class="education-item">
+                <h3>Secondary (Class 10th)</h3>
+                <div class="institution">Sarat Chandra Sur Institution | Passing: 2019</div>
+            </div>
+        </div>
+
+        <!-- Languages Section -->
+        <div class="section">
+            <h2>Languages</h2>
+            <div class="skill-tags">
+                <span class="skill-tag">English</span>
+                <span class="skill-tag">Bengali</span>
+                <span class="skill-tag">Hindi</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Depan Das. All Rights Reserved.</p>
+        <p>Open to Full Stack Development Opportunities</p>
+    </footer>
+
+</body>
+</html>
