@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Header & Navigation */
+header {
+    background: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a, nav select {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+section table[bgcolor="#f0f0f0"] {
+    background: linear-gradient(135deg, #3498db, #8e44ad) !important;
+    color: white !important;
+    border-radius: 8px;
+}
+
+section table[bgcolor="#f0f0f0"] h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* Articles & Sidebar Cards */
+article table, aside table, section table {
+    border: none !important;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background-color: #fff !important;
+    margin-bottom: 20px;
+}
+
+img {
+    border-radius: 5px;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #2ecc71;
+}
+
+/* Forms */
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Footer */
+footer table {
+    border-radius: 0 !important;
+    margin-top: 40px;
+}
